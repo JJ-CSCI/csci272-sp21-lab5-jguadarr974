@@ -8,16 +8,22 @@
 class Real
 {
 double Real{};
-double Imaginary{};
 public:
 double GetReal(){return Real;}
-double GetImaginary(){return Imaginary;}
 };
 
 class Complex
 {
+class Real; 
+double Imaginary{};
 public:
-double n{2};
+double GetReal();
+double GetReal(float a, float b);
+double GetImaginary(){return Imaginary;}
+
+double operator*()
+{
+
 };
 
 //------------------------------
