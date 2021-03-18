@@ -5,11 +5,19 @@
 //------------------------------
 
 // Write the assignment code here
-class Real{
-Real();
-Imaginary();
+class Real
+{
+double Real{};
+double Imaginary{};
 public:
-n.GetReal();
+double GetReal(){return Real;}
+double GetImaginary(){return Imaginary;}
+};
+
+class Complex
+{
+public:
+double n{2};
 };
 
 //------------------------------
