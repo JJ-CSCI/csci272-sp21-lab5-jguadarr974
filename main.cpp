@@ -5,7 +5,12 @@
 //------------------------------
 
 // Write the assignment code here
-
+class Real{
+Real();
+Imaginary();
+public:
+n.GetReal();
+};
 
 //------------------------------
 //   DO NOT MODIFY TEST CASES
