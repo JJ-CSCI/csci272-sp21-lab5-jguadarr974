@@ -7,24 +7,26 @@
 // Write the assignment code here
 class Real
 {
-double Real{};
+double r{};
 public:
-double GetReal(){return Real;}
+Real (double x): r{x} {}
+double GetReal(){return r;}
+Real operator*(double n) const 
+{
+  Real y{r*n};
+  return y;
+}
 };
 
-class Complex
+class Complex:public Real 
 {
-class Real; 
-double Imaginary{};
+double newr; 
 public:
-double GetReal();
-double GetReal(float a, float b);
-double GetImaginary(){return Imaginary;}
-
-double operator*()
-{
+Complex (double x, double y):Real(x), newr{y}{}
+double getImaginary(){return newr;}
 
 };
+
 
 //------------------------------
 //   DO NOT MODIFY TEST CASES
