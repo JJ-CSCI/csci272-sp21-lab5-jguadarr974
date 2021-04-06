@@ -7,10 +7,11 @@
 // Write the assignment code here
 class Real
 {
-double r{};
+protected:
+  double r{};
 public:
-Real (double x): r{x} {}
-double GetReal(){return r;}
+  Real (double x): r{x} {}
+  double GetReal(){return r;}
 Real operator*(double n) const 
 {
   Real y{r*n};
@@ -20,13 +21,32 @@ Real operator*(double n) const
 
 class Complex:public Real 
 {
-double newr; 
+protected:
+  double newr; 
 public:
-Complex (double x, double y):Real(x), newr{y}{}
+  Complex (double x, double y):Real(x), newr{y}{}
 double getImaginary(){return newr;}
-
+Complex operator*(double w) const 
+{
+  Complex y{r*w,newr*w};
+    return y; 
+}
 };
 
+class Surreal: public Complex 
+{
+  protected:
+    double xyz; 
+  public:
+  Surreal ( double x, double y, double z):Complex (x,y), xyz{z}{}
+  double GetSurreal(){return xyz;}
+  Surreal operator*(double w)const
+  {
+    Surreal y{r*w,newr*w,xyz*w};
+    return y; 
+  }
+  
+}
 
 //------------------------------
 //   DO NOT MODIFY TEST CASES
