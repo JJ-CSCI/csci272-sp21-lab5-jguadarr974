@@ -25,7 +25,7 @@ protected:
   double newr; 
 public:
   Complex (double x, double y):Real(x), newr{y}{}
-double getImaginary(){return newr;}
+double GetImaginary(){return newr;}
 Complex operator*(double w) const 
 {
   Complex y{r*w,newr*w};
