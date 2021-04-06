@@ -46,7 +46,7 @@ class Surreal: public Complex
     return y; 
   }
   
-}
+};
 
 //------------------------------
 //   DO NOT MODIFY TEST CASES
